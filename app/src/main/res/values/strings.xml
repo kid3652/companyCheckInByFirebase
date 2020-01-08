@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">companyCheckInByFirebase</string>
+    <string name="loginoutCheck">確定登出嗎?</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
