@@ -133,6 +133,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 finish();
             } else {
                 if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                    if(provider==null){
+                        provider=LocationManager.NETWORK_PROVIDER;
+                    }
                     mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER /*provider*/, 500, 0, MapsActivity.this);
                     last = mLocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
                     mLocationManager.removeUpdates(this);
